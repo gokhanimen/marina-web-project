@@ -1,0 +1,6 @@
+@mixin border($height, $type, $color){
+  border: $height $type $color;
+}
+
+// Example
+// border: 1px solid gray;

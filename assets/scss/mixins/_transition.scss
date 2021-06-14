@@ -1,0 +1,6 @@
+@mixin transition($type, $duration){
+  transition: $type $duration;
+}
+
+// Example
+// @include transition(ease-in, 300ms);

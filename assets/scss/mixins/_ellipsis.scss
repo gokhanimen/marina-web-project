@@ -1,0 +1,9 @@
+@mixin ellipsis($truncation-bounding){
+  max-width: $truncation-bounding;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// Example
+// @include ellipsis(10px);

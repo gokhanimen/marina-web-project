@@ -1,0 +1,12 @@
+@function px2rem($px) {
+  @return $px / $base-font-size * 1rem;
+}
+
+@mixin line-height($line-height) {
+  line-height: px2rem($line-height);
+}
+
+// Example
+// h1 {
+//     @include line-height(20px);
+// }
