@@ -1,0 +1,11 @@
+.a-input {
+    color: $Black;
+    background-color: $LightWhite;
+    border: 1px solid $Logan;
+    font-family: $second-font-family;
+    height: 37px;
+    padding: 10px;
+    &::placeholder {
+        color: $SpunPearl;
+    }
+}

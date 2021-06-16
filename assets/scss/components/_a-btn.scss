@@ -1,0 +1,18 @@
+.a-btn {
+    padding: 11px 20px;
+    border: 2px solid $MediumPurple;
+    border-radius: 3px;
+    color: $MediumPurple;
+    background-color: transparent;
+    font-family: $second-font-family;
+    @include font-size(9px);
+    text-decoration: none;
+    @include flex(inline-flex, row, nowrap, center);
+    &:hover {
+        color: $White;
+        background-color: $MediumPurple;
+    }
+    &.-fullWidth {
+        width: 100%;
+    }
+}
