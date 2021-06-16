@@ -1,10 +1,10 @@
-@mixin flex($direction, $wrapType, $justify, $align: center) {
-    display: flex;
+@mixin flex($flex, $direction, $wrapType, $justify, $align: center) {
+    display: $flex;
     flex-flow: $direction $wrapType;
     justify-content: $justify;
     align-items: $align;
 }
 
 // Example
-// @include flex(column, no-wrap, space-beetwen, right); 
-// @include flex(column, no-wrap, space-beetwen);
+// @include flex(flex, column, nowrap, space-beetwen, right); 
+// @include flex(inline-flex, column, nowrap, space-beetwen);
