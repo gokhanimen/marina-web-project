@@ -1,67 +1,51 @@
 // Mobile
-.m-right {
-    text-align: right;
-}
-
-.m-center {
-    text-align: center;
-}
-
-.m-left {
-    text-align: left;
-}
-
-.m-justify {
-    text-align: justify;
+.m {
+    &-right {
+        text-align: right;
+    }
+    &-center {
+        text-align: center;
+    }
+    &-left {
+        text-align: left;
+    }
+    &-justify {
+        text-align: justify;
+    }
 }
 
 // Tablet
-.t-right {
-    @include tablet {
-        text-align: right;
-        background-color: red;
-    }
-}
-
-.t-center {
-    @include tablet {
-        text-align: center;
-    }
-}
-
-.t-left {
-    @include tablet {
-        text-align: left;
-    }
-}
-
-.t-justify {
-    @include tablet {
-        text-align: justify;
+@include tablet {
+    .t {
+        &-right {
+            text-align: right;
+        }
+        &-center {
+            text-align: center;
+        }
+        &-left {
+            text-align: left;
+        }
+        &-justify {
+            text-align: justify;
+        }
     }
 }
 
 // Desktop
-.d-right {
-    @include desktop {
-        text-align: right;
-    }
-}
-
-.d-center {
-    @include desktop {
-        text-align: center;
-    }
-}
-
-.d-left {
-    @include desktop {
-        text-align: left;
-    }
-}
-
-.d-justify {
-    @include desktop {
-        text-align: justify;
+@include desktop {
+    .d {
+        &-right {
+            text-align: right;
+        }
+        &-center {
+            text-align: center;
+        }
+        &-left {
+            text-align: left;
+        }
+        &-justify {
+            text-align: justify;
+        }
     }
 }

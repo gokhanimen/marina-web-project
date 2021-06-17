@@ -1,34 +1,33 @@
 // Mobile
-.m-none {
-    display: none;
-}
-
-.m-block {
-    display: block;
-}
-
-// Tablet
-.t-none {
-    @include tablet {
+.m {
+    &-none {
         display: none;
+    }
+    &-block {
+        display: block;
     }
 }
 
-.t-block {
-    @include tablet {
-        display: block;
+// Tablet
+@include tablet {
+    .t {
+        &-none {
+            display: none;
+        }
+        &-block {
+            display: block;
+        }
     }
 }
 
 // Desktop
-.d-none {
-    @include desktop {
-        display: none;
-    }
-}
-
-.d-block {
-    @include desktop {
-        display: block;
+@include desktop {
+    .d {
+        &-none {
+            display: none;
+        }
+        &-block {
+            display: block;
+        }
     }
 }
