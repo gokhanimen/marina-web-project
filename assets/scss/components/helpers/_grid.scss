@@ -1,0 +1,101 @@
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: mediumspringgreen;
+    padding-left: 9px;
+    padding-right: 9px;
+    @include tablet {
+        max-width: 708px;
+    }
+    @include orientation {
+        max-width: 940px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    &.jc {
+        &-between {
+            justify-content: space-between;
+        }
+        &-start {
+            justify-content: start;
+        }
+        &-center {
+            justify-content: center;
+        }
+        &-end {
+            justify-content: flex-end;
+        }
+    }
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+$column: 12;
+.col {
+    height: 50px;
+    display: flex;
+    padding: 15px 15px;
+    border: .5px solid black;
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+    &.jc {
+        &-between {
+            justify-content: space-between;
+        }
+        &-start {
+            justify-content: start;
+        }
+        &-center {
+            justify-content: center;
+        }
+        &-end {
+            justify-content: flex-end;
+        }
+    }
+    &.ai {
+        &-start {
+            align-items: start;
+        }
+        &-center {
+            align-items: center;
+        }
+        &-end {
+            align-items: flex-end;
+        }
+    }
+    @for $i from 1 through $column {
+        &-m-#{$i} {
+            flex-basis: 100% * $i / 12;
+        }
+        &.offset-m-#{$i} {
+            margin-left: calc(100% - ((#{$column - $i}) * 8.333333%));
+        }
+        &-t-#{$i} {
+            @include tablet {
+                flex-basis: 100% * $i / 12;
+            }
+        }
+        &.offset-t-#{$i} {
+            @include tablet {
+                margin-left: calc(100% - ((#{$column - $i}) * 8.333333%));
+            }
+        }
+        &-d-#{$i} {
+            @include desktop {
+                flex-basis: 100% * $i / 12;
+            }
+        }
+        &.offset-d-#{$i} {
+            @include desktop {
+                margin-left: calc(100% - ((#{$column - $i}) * 8.333333%));
+            }
+        }
+    }
+}
