@@ -4,3 +4,95 @@
 @import "./mixins/_initial.scss";
 @import "./components/_initial.scss";
 @import "./components/helpers/_initial.scss";
+@import "./components/_m-card.scss";
+@import "../icons/_icon-font.scss";
+$header-height: 251px;
+.o-showcase {
+    padding-bottom: 50px;
+    height: 130vh;
+    width: 100%;
+    background-image: url(../image/home_marina_section_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $DeepCove;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & .col:not(:last-child) {
+        border-right: .5px solid rgba(#fff, .2);
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    & .content {
+        display: flex;
+        flex-direction: column;
+        & p {
+            color: $White;
+            font-family: $second-font-family;
+            font-weight: $light;
+        }
+    }
+}
+
+.o-header {
+    height: $header-height;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: $Valhalla;
+    &__logo {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+    }
+    &__content {
+        width: 100%;
+        height: $header-height;
+        @include flex(flex,
+        column,
+        nowrap,
+        space-evenly);
+    }
+    &__menu {
+        @include flex(flex,
+        row-reverse,
+        nowrap,
+        center);
+    }
+    & .o-navigation {
+        & ul {
+            @include flex(flex,
+            row,
+            nowrap,
+            center);
+            & li {
+                @include transition(all,
+                300ms);
+                padding: 14px 20px;
+                border-top: 4px solid transparent;
+                border-top: .5px solid rgba(#fff, .2);
+                &.-active {
+                    border-top: 4px solid #fff;
+                    & a {
+                        color: $White;
+                    }
+                }
+                &:hover {
+                    @include transition(all,
+                    300ms);
+                    border-top: 4px solid #fff;
+                    & a {
+                        color: $White;
+                    }
+                }
+                & a {
+                    color: $Mischka;
+                    text-decoration: none;
+                    font-family: $first-font-family;
+                    @include font-size(12px);
+                }
+            }
+        }
+    }
+}
+
