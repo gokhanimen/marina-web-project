@@ -1,0 +1,179 @@
+@import "./_reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300;400;700&display=swap');
+@import "./variables/_initial.scss";
+@import "./mixins/_initial.scss";
+@import "./components/_initial.scss";
+@import "./components/helpers/_initial.scss";
+@import "./components/_m-card.scss";
+@import "../icons/_icon-font.scss";
+$header-height: 251px;
+.o-showcase {
+    height: 100%;
+    width: 100%;
+    background-color: $Valhalla;
+    padding-bottom: 100px;
+    & h1 {
+        @include line-height(20px);
+    }
+    & .o-header {
+        height: $header-height;
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: $Valhalla;
+        &__logo {
+            height: 75px;
+            width: 75px;
+            object-fit: cover;
+        }
+        &__content {
+            width: 100%;
+            height: $header-height;
+            @include flex(flex,
+            column,
+            nowrap,
+            space-evenly);
+        }
+        &__menu {
+            @include flex(flex,
+            row-reverse,
+            nowrap,
+            center);
+        }
+        & .o-navigation {
+            & ul {
+                @include flex(flex,
+                row,
+                nowrap,
+                center);
+                & li {
+                    @include transition(all,
+                    300ms);
+                    padding: 14px 20px;
+                    border-top: 4px solid transparent;
+                    border-top: .5px solid rgba(#fff, .2);
+                    &.-active {
+                        border-top: 4px solid #fff;
+                        & a {
+                            color: $White;
+                        }
+                    }
+                    &:hover {
+                        @include transition(all,
+                        300ms);
+                        border-top: 4px solid #fff;
+                        & a {
+                            color: $White;
+                        }
+                    }
+                    & a {
+                        color: $Mischka;
+                        text-decoration: none;
+                        font-family: $first-font-family;
+                        @include font-size(12px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.o-description {
+    height: 100%px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &::after {
+        content: "";
+        height: 61px;
+        width: 245px;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        background-repeat: no-repeat;
+        transform: translateX(-50%);
+        background-image: url(../image/home_marina_wave.png);
+    }
+    & .m-row {
+        margin: 100px 0;
+        & h5 {
+            color: $MediumPurple;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+.o-footer {
+    height: 100%;
+    padding-top: 90px;
+    background-color: #251248;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../image/home_marina_decoration1.png");
+        background-repeat: no-repeat;
+        height: 13px;
+        width: 100%;
+        top: -13px;
+    }
+    & .inclusive {
+        padding-bottom: 90px;
+    }
+    & h3 {
+        color: $White;
+        padding-bottom: 25px;
+    }
+    & a {
+        @include font-size(10px,
+        12px);
+        color: $White;
+        text-decoration: none;
+    }
+    & li {
+        padding-bottom: 20px;
+        & i {
+            font-size: 14px;
+            color: $Pomegrante;
+            margin-right: 10px;
+        }
+    }
+    & p {
+        color: $White;
+        padding-bottom: 25px;
+    }
+    & .m-image_gallery {
+        & img {
+            height: 120px;
+            width: 120px;
+            margin-right: 7px;
+            margin-bottom: 7px;
+        }
+    }
+    & p {
+        @include font-size(10px,
+        12px);
+        color: $SpunPearl;
+    }
+    & .m-our_mission {
+        & a {
+            color: $Pomegrante;
+        }
+        & p {
+            @include font-size(9px,
+            16px)
+        }
+    }
+    & .o-footer__copy {
+        border-top: .5px solid $DoveGray;
+        padding-top: 30px;
+        & .copyright {
+            & a:hover {
+                color: $Pomegrante;
+                text-decoration: underline $Pomegrante;
+            }
+        }
+    }
+}
