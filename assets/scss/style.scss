@@ -225,3 +225,46 @@ $header-height: 251px;
     }
 }
 
+.o-marina__detail {
+    height: 100vh;
+    background-image: url(../image/home_marina_sectionbg3.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 80px;
+    object-fit: cover;
+    margin-top: 250px;
+    & .m-desc {
+        & h5 {
+            color: $MediumPurple;
+            margin-bottom: 30px;
+        }
+        & h1 {
+            margin-bottom: 30px;
+        }
+    }
+    & .m-image {
+        height: 649px;
+        background-image: url(../image/home_marina_wrapbg1.jpg);
+        background-repeat: no-repeat;
+        object-fit: fill;
+        & .boat {
+            padding-top: 380px;
+            padding-left: 40px;
+        }
+        & .m-image-content {
+            padding-right: 20px;
+            padding-top: 380px;
+            color: $White;
+            & .number {
+                font-size: 64px;
+                line-height: 64px;
+                font-weight: 400;
+                margin-bottom: 5px;
+            }
+            & .comment {
+                font-size: 12px;
+                line-height: 20px;
+                font-weight: 400;
+            }
+        }
+    }
+}
