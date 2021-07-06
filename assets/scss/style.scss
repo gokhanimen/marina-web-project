@@ -209,9 +209,6 @@ $header-height: 251px;
 }
 
 .o-new {
-    .m-container {
-        overflow: hidden;
-    }
     .m-row {
         & h5 {
             color: $MediumPurple;
@@ -230,7 +227,7 @@ $header-height: 251px;
     background-image: url(../image/home_marina_sectionbg3.jpg);
     background-repeat: no-repeat;
     background-position-y: 80px;
-    object-fit: cover;
+    background-size: cover;
     margin-top: 250px;
     & .m-desc {
         & h5 {
