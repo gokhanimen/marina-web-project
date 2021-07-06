@@ -208,3 +208,20 @@ $header-height: 251px;
     }
 }
 
+.o-new {
+    .m-container {
+        overflow: hidden;
+    }
+    .m-row {
+        & h5 {
+            color: $MediumPurple;
+        }
+    }
+    .line {
+        display: inline-block;
+        height: 1px;
+        width: 100%;
+        background-color: #7d48df;
+    }
+}
+
