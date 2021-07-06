@@ -169,3 +169,42 @@ $header-height: 251px;
     }
 }
 
+.o-section-wrapper {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../image/home_marina_sectionbg2.png);
+    background-position-x: -170px;
+    background-position-y: -100px;
+    @include flex(flex,
+    row,
+    nowrap,
+    center);
+    margin-bottom: 130px;
+    position: relative;
+    & img {
+        position: absolute;
+        top: 230px;
+        left: 255px;
+    }
+    & .m-article {
+        &__desc {
+            @include font-size(10px,
+            18px);
+            font-weight: $light;
+            font-family: $second-font-family;
+            color: $DoveGray;
+        }
+        & .tool-tip {
+            padding: 20px;
+            background-color: #F7F7F7;
+            border-top: 1px solid #C5C8CB;
+            &__desc {
+                @include font-size(9px,
+                25px);
+                font-weight: $light;
+                color: #626262;
+            }
+        }
+    }
+}
+
