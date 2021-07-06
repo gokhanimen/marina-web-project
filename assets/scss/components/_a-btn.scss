@@ -7,10 +7,12 @@
     font-family: $second-font-family;
     @include font-size(9px);
     text-decoration: none;
+    @include transition(ease-out, 300ms);
     @include flex(inline-flex, row, nowrap, center);
     &:hover {
         color: $White;
         background-color: $MediumPurple;
+        @include transition(ease-in, 300ms);
     }
     &.-fullWidth {
         width: 100%;

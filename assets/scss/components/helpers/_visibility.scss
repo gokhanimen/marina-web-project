@@ -1,10 +1,10 @@
 // Mobile
 .m {
     &-none {
-        display: none;
+        display: none !important;
     }
     &-block {
-        display: block;
+        display: block !important;
     }
 }
 
@@ -12,10 +12,10 @@
 @include tablet {
     .t {
         &-none {
-            display: none;
+            display: none !important;
         }
         &-block {
-            display: block;
+            display: block !important;
         }
     }
 }
@@ -24,10 +24,10 @@
 @include desktop {
     .d {
         &-none {
-            display: none;
+            display: none !important;
         }
         &-block {
-            display: block;
+            display: block !important;
         }
     }
 }

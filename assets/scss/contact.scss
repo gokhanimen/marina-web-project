@@ -1,0 +1,302 @@
+    @import "./_reset.scss";
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300;400;700&display=swap');
+    @import "./variables/_initial.scss";
+    @import "./mixins/_initial.scss";
+    @import "./components/_initial.scss";
+    @import "./components/helpers/_initial.scss";
+    @import "../icons/_icon-font.scss";
+    $header-height: 251px;
+    .o-showcase {
+        height: 100%;
+        width: 100%;
+        background-color: $Valhalla;
+        padding-bottom: 100px;
+        & h1 {
+            @include line-height(20px);
+        }
+        & .o-header {
+            height: $header-height;
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: $Valhalla;
+            &__logo {
+                height: 75px;
+                width: 75px;
+                object-fit: cover;
+            }
+            &__content {
+                width: 100%;
+                height: $header-height;
+                @include flex(flex,
+                column,
+                nowrap,
+                space-evenly);
+            }
+            &__menu {
+                @include flex(flex,
+                row-reverse,
+                nowrap,
+                center);
+            }
+            & .o-navigation {
+                & ul {
+                    @include flex(flex,
+                    row,
+                    nowrap,
+                    center);
+                    & li {
+                        @include transition(all,
+                        300ms);
+                        padding: 14px 20px;
+                        border-top: 4px solid transparent;
+                        border-top: .5px solid rgba(#fff, .2);
+                        &.-active {
+                            border-top: 4px solid #fff;
+                            & a {
+                                color: $White;
+                            }
+                        }
+                        &:hover {
+                            @include transition(all,
+                            300ms);
+                            border-top: 4px solid #fff;
+                            & a {
+                                color: $White;
+                            }
+                        }
+                        & a {
+                            color: $Mischka;
+                            text-decoration: none;
+                            font-family: $first-font-family;
+                            @include font-size(12px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .o-location {
+        height: 100vh;
+        color: #fff;
+        & .m-contact {
+            height: 100vh;
+            width: 100%;
+            padding-left: 270px;
+            padding-top: 100px;
+            background-image: url(../image/home_marina_wrapbg2.jpg);
+            & p {
+                @include font-size(12px,
+                20px)
+            }
+            & a {
+                @include font-size(10px,
+                20px);
+                text-decoration: none;
+                color: #fff;
+            }
+            & .contact {
+                & h1 {
+                    max-width: 70%;
+                }
+            }
+        }
+        & .m-location {
+            height: 100vh;
+            width: 100%;
+            &__map {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    
+    .o-feedback {
+        height: 100%;
+        padding-top: 150px;
+        background: #eaeaee url(../image/home_marina_sectionbg7.png) no-repeat;
+        padding-bottom: 150px;
+        & .m-comment {
+            & h2 {
+                max-width: 70%;
+            }
+            & p {
+                @include font-size(10px,
+                16px);
+                font-family: $second-font-family;
+                color: $DoveGray;
+                max-width: 98%;
+            }
+        }
+        & .m-form {
+            &__subject {
+                width: 100%;
+                height: 35px;
+                margin-bottom: 10px;
+            }
+            &__user {
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+                &Name {
+                    width: 49%;
+                    height: 35px;
+                }
+                &Mail {
+                    width: 49%;
+                    height: 35px;
+                }
+            }
+            &__message {
+                width: 100%;
+                margin-bottom: 20px;
+                resize: none;
+                padding: 10px;
+            }
+            & .-input {
+                padding-left: 10px;
+                border-radius: 3px;
+                padding-right: 10px;
+                color: #a5a5a6;
+                background-color: rgba(240, 240, 242, 1);
+                border: .5px solid #aca8c5;
+                &:focus {
+                    background-color: #E9F5FC;
+                    border-color: #d5e5ee;
+                    color: #1982C2;
+                    outline: none;
+                }
+            }
+        }
+    }
+    
+    .o-contactUs {
+        height: 100%;
+        padding-bottom: 200px;
+        background-color: #eaeaee;
+        & .line {
+            display: inline-block;
+            height: 1px;
+            width: 100%;
+            background-color: #7d48df;
+        }
+        & h5.a-title {
+            color: $MediumPurple;
+        }
+        &__profilePhoto {
+            height: 254px;
+            width: 254px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+        & .job {
+            @include font-size(10px,
+            16px);
+            font-family: $second-font-family;
+            color: $SilverChalice;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $MediumPurple;
+            align-self: flex-start;
+        }
+        & .biography {
+            @include font-size(10px,
+            14px);
+            font-family: $second-font-family;
+            color: $DoveGray;
+        }
+        &__social a {
+            padding: 8px;
+            display: inline-flex;
+            align-items: center;
+            margin-right: 3px;
+            background-color: $White;
+            & i {
+                font-size: 20px;
+            }
+        }
+        & .day {
+            border-bottom: 1px solid $MediumPurple;
+            padding-bottom: 15px;
+            align-self: flex-start;
+        }
+        & .time {
+            display: flex;
+            & h2 {
+                color: $MediumPurple;
+            }
+        }
+    }
+    
+    .o-footer {
+        height: 100%;
+        padding-top: 90px;
+        background-color: #251248;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url("../image/home_marina_decoration1.png");
+            background-repeat: no-repeat;
+            height: 13px;
+            width: 100%;
+            top: -13px;
+        }
+        & .inclusive {
+            padding-bottom: 90px;
+        }
+        & h3 {
+            color: $White;
+            padding-bottom: 25px;
+        }
+        & a {
+            @include font-size(10px,
+            12px);
+            color: $White;
+            text-decoration: none;
+        }
+        & li {
+            padding-bottom: 20px;
+            & i {
+                font-size: 14px;
+                color: $Pomegrante;
+                margin-right: 10px;
+            }
+        }
+        & p {
+            color: $White;
+            padding-bottom: 25px;
+        }
+        & .m-image_gallery {
+            & img {
+                height: 120px;
+                width: 120px;
+                margin-right: 7px;
+                margin-bottom: 7px;
+            }
+        }
+        & p {
+            @include font-size(10px,
+            12px);
+            color: $SpunPearl;
+        }
+        & .m-our_mission {
+            & a {
+                color: $Pomegrante;
+            }
+            & p {
+                @include font-size(9px,
+                16px)
+            }
+        }
+        & .o-footer__copy {
+            border-top: .5px solid $DoveGray;
+            padding-top: 30px;
+            & .copyright {
+                & a:hover {
+                    color: $Pomegrante;
+                    text-decoration: underline $Pomegrante;
+                }
+            }
+        }
+    }

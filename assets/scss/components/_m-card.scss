@@ -1,0 +1,41 @@
+.m-gallery {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        background-color: $MediumPurple;
+        height: 1px;
+        width: 0;
+        @include transition(all, .3s);
+    }
+    &:hover::after {
+        width: 100px;
+    }
+    & .image-wrapper {
+        overflow: hidden;
+        height: 255px;
+        width: 340px;
+    }
+    & img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        @include transition(all, .5s);
+        &:hover {
+            transform: scale(1.1);
+            @include transition(all, .5s);
+        }
+    }
+    & .post-date {
+        color: $SpunPearl;
+        font-size: $fs-12;
+    }
+    & .post-detail {
+        color: $Black;
+        font-size: $fs-21;
+    }
+}
