@@ -18,12 +18,13 @@ $header-height: 251px;
 }
 
 .o-description {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-top: 250px;
     &::after {
         content: "";
         height: 61px;
@@ -36,8 +37,8 @@ $header-height: 251px;
         background-image: url(../image/home_marina_wave.png);
     }
     & p {
-        @include font-size(10px,
-        18px);
+        @include font-size(8px,
+        14px);
         font-family: $second-font-family;
         font-weight: $light;
         margin-bottom: 15px;
@@ -46,9 +47,12 @@ $header-height: 251px;
 
 .o-gallery {
     height: 100%;
+    & .m-image_gallery {
+        display: flex;
+        flex-wrap: wrap;
+    }
     & img {
-        height: 450px;
-        width: 500px;
+        width: 100%;
         margin: 10px;
     }
 }
@@ -61,7 +65,6 @@ $header-height: 251px;
             font-family: $second-font-family;
             @include font-size(9px,
             14px);
-            margin: 0px 200px;
             color: $DoveGray;
         }
     }
@@ -75,17 +78,23 @@ $header-height: 251px;
         }
     }
     & .button {
-        margin: 150px 0;
+        margin: 100px 0;
         & a {
             color: $MediumPurple;
             border: solid 10px $MediumPurple;
-            padding: 30px 200px;
+            padding: 30px 90px;
             text-decoration: none;
             transition: 300ms;
         }
-        & a:hover {
-            border-color: #5824B9;
-            transition: 300ms;
+    }
+    & .image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & img {
+            height: 210px;
+            width: 310px;
         }
     }
 }
@@ -158,6 +167,51 @@ $header-height: 251px;
             & a:hover {
                 color: $Pomegrante;
                 text-decoration: underline $Pomegrante;
+            }
+        }
+    }
+}
+
+@include desktop() {
+    $header-height: 251px;
+    .o-description {
+        height: 100vh;
+        padding-top: 0px;
+        & p {
+            @include font-size(10px,
+            18px);
+            font-family: $second-font-family;
+            font-weight: $light;
+            margin-bottom: 15px;
+        }
+    }
+    .o-gallery {
+        height: 100%;
+        & img {
+            width: 100%;
+            margin: 10px;
+        }
+    }
+    .o-plan {
+        & .title__desc {
+            & p {
+                margin: 0px 200px;
+            }
+        }
+        & .image {
+            & img {
+                height: auto;
+                width: auto;
+            }
+        }
+        & .button {
+            margin: 150px 0;
+            & a {
+                color: $MediumPurple;
+                border: solid 10px $MediumPurple;
+                padding: 30px 200px;
+                text-decoration: none;
+                transition: 300ms;
             }
         }
     }
