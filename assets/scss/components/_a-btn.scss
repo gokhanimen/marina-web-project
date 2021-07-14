@@ -9,6 +9,7 @@
     text-decoration: none;
     @include transition(ease-out, 300ms);
     @include flex(inline-flex, row, nowrap, center);
+    cursor: pointer;
     &:hover {
         color: $White;
         background-color: $MediumPurple;
