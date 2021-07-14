@@ -18,32 +18,44 @@
     }
     
     .o-location {
-        height: 100vh;
-        color: #fff;
-        & .m-contact {
-            height: 100vh;
-            width: 100%;
-            padding-left: 270px;
-            padding-top: 100px;
-            background-image: url(../image/home_marina_wrapbg2.jpg);
+        width: 100%;
+        color: $White;
+        & .image {
+            position: relative;
+            img {
+                height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+        & .m-adress {
+            height: 100%;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            & h1 {
+                width: 80%;
+            }
             & p {
-                @include font-size(12px,
-                20px)
+                @include font-size(9px,
+                12px);
             }
             & a {
-                @include font-size(10px,
-                20px);
+                @include font-size(9px,
+                12px);
                 text-decoration: none;
-                color: #fff;
+                color: $White;
             }
-            & .contact {
-                & h1 {
-                    max-width: 70%;
-                }
+            & img {
+                height: 127px;
+                width: 61px;
             }
         }
         & .m-location {
-            height: 100vh;
+            min-height: 500px;
             width: 100%;
             &__map {
                 height: 100%;
@@ -53,17 +65,17 @@
     }
     
     .o-feedback {
-        height: 100%;
+        height: 100vh;
         padding-top: 150px;
         background: #eaeaee url(../image/home_marina_sectionbg7.png) no-repeat;
         padding-bottom: 150px;
+        display: flex;
+        align-items: center;
         & .m-comment {
-            & h2 {
-                max-width: 70%;
-            }
+            text-align: center;
             & p {
-                @include font-size(10px,
-                16px);
+                @include font-size(8px,
+                14px);
                 font-family: $second-font-family;
                 color: $DoveGray;
                 max-width: 98%;
@@ -113,8 +125,11 @@
     
     .o-contactUs {
         height: 100%;
-        padding-bottom: 200px;
+        padding-bottom: 150px;
         background-color: #eaeaee;
+        &__card {
+            padding: 0 50px;
+        }
         & .line {
             display: inline-block;
             height: 1px;
@@ -125,14 +140,13 @@
             color: $MediumPurple;
         }
         &__profilePhoto {
-            height: 254px;
-            width: 254px;
+            width: 100%;
             object-fit: cover;
             border-radius: 3px;
         }
         & .job {
-            @include font-size(10px,
-            16px);
+            @include font-size(8px,
+            12px);
             font-family: $second-font-family;
             color: $SilverChalice;
             padding-bottom: 10px;
@@ -140,8 +154,8 @@
             align-self: flex-start;
         }
         & .biography {
-            @include font-size(10px,
-            14px);
+            @include font-size(8px,
+            12px);
             font-family: $second-font-family;
             color: $DoveGray;
         }
