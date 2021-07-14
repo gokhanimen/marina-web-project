@@ -13,6 +13,9 @@
     background-image: url(../image/home_marina_sectionbg4.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     & h1 {
         margin-bottom: 250px;
     }
@@ -86,6 +89,11 @@
             padding: 30px 90px;
             text-decoration: none;
             transition: 300ms;
+            &:hover {
+                transition: 300ms;
+                color: $LuckyPoint;
+                border: solid 10px $LuckyPoint;
+            }
         }
     }
     & .image {
