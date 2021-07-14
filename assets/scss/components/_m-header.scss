@@ -22,8 +22,8 @@ $header-height: 60px;
     }
     & .o-navigation {
         display: block;
-        @include z-index("penthouse");
         position: fixed;
+        @include z-index("penthouse");
         top: 0;
         right: 0;
         transform: translateX(250px);
@@ -75,10 +75,10 @@ $header-height: 60px;
             @include flex(flex, column, nowrap, space-evenly);
         }
         & .o-navigation {
-            display: block;
-            position: relative;
+            position: static;
             height: auto;
             width: auto;
+            transform: translateX(0);
             background-color: transparent;
             padding-top: 50px;
             & ul {

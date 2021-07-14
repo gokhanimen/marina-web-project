@@ -1,0 +1,24 @@
+.a-topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    @include z-index("penthouse");
+    height: 40px;
+    width: 40px;
+    background: $Pomegrante;
+    border-radius: 50%;
+    text-decoration: none;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        top: 40%;
+        left: 30%;
+        transform: translateX(-50%);
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        transform: rotate(45deg);
+    }
+}
