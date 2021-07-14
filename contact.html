@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/desktop.min.css" />
     <link rel="stylesheet" href="./assets/css/contact.min.css" />
     <title>CONTACT - Marina</title>
 </head>
@@ -18,7 +17,7 @@
                     <a href="./index.html">
                         <img class="o-header__logo ai-center" src="./assets/image/logo_marina.png" alt="Marina Logo" /></a>
                     <div class="o-header__menu">
-                        <svg class="d-none" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" role="button">
+                        <svg id="hamburgerBtn" class="o-header__hamburger d-none" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" role="button">
                 <path
                   d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z"
                   fill="#ffffff"
@@ -33,9 +32,24 @@
                 />
               </svg>
 
-                        <div class="col col-d-12 m-none d-block">
+                        <div class="col col-d-12 d-block">
                             <nav class="o-navigation">
                                 <ul>
+                                    <li class="d-none">
+                                        <a role="button" href="javascript:void(0)"><svg
+                          id="hamburgerCloseBtn"
+                          height="18px"
+                          viewBox="0 0 329.26933 329"
+                          width="18px"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill="#fff"
+                            d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"
+                          />
+                        </svg>
+                      </a>
+                                    </li>
                                     <li>
                                         <a href="./index.html">Home</a>
                                     </li>
@@ -179,93 +193,95 @@
             </div>
         </div>
     </section>
-    <section class="o-footer">
-        <div class="m-container">
-            <div class="inclusive">
-                <div class="m-row">
-                    <div class="col col-m-3">
-                        <ul class="m-useful__links">
-                            <h3 class="a-title -d-h3">Information</h3>
-                            <li>
-                                <i class="icon-right"></i>
-                                <a href="#">Aenean solli</a>
-                            </li>
-                            <li>
-                                <i class="icon-right"></i>
+        </section>
+        <section class="o-footer">
+            <div class="m-container">
+                <div class="inclusive">
+                    <div class="m-row jc-center">
+                        <div class="col col-m-12 col-t-3 col-d-2">
+                            <ul class="m-useful__links -mb-30">
+                                <h3 class="a-title -m-h3 -d-h3">Information</h3>
+                                <li>
+                                    <i class="icon-right"></i>
+                                    <a href="# ">Aenean solli</a>
+                                </li>
+                                <li>
+                                    <i class="icon-right"></i>
 
-                                <a href="#">Duis sed odio sit</a>
-                            </li>
-                            <li>
-                                <i class="icon-right"></i>
+                                    <a href="# ">Duis sed odio sit</a>
+                                </li>
+                                <li>
+                                    <i class="icon-right"></i>
 
-                                <a href="#">Morbi accumsan</a>
-                            </li>
-                            <li>
-                                <i class="icon-right"></i>
+                                    <a href="# ">Morbi accumsan</a>
+                                </li>
+                                <li>
+                                    <i class="icon-right"></i>
 
-                                <a href="#">Nam nec tellus</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col col-m-3">
-                        <ul class="m-useful__links">
-                            <h3 class="a-title -d-h3">Useful links</h3>
-                            <li>
-                                <i class="icon-right"></i>
-
-                                <a href="#">Duis sed odio</a>
-                            </li>
-                            <li>
-                                <i class="icon-right"></i>
-
-                                <a href="#">Morbi accum</a>
-                            </li>
-                            <li>
-                                <i class="icon-right"></i>
-
-                                <a href="#">Nam nec</a>
-                            </li>
-                            <li>
-                                <i class="icon-right"></i>
-
-                                <a href="#">Class aptent</a>
-                            </li>
-                            <li>
-                                <i class="icon-right"></i>
-
-                                <a href="#">Mauris in erat</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col col-m-3">
-                        <div class="m-our_mission">
-                            <h3 class="a-title -d-h3">Our mission</h3>
-                            <p>
-                                Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae.
-                            </p>
-                            <a href="#">Read more</a>
+                                    <a href="# ">Nam nec tellus</a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="col col-m-3">
-                        <div class="m-image_gallery">
-                            <h3 class="a-title -d-h3">Image gallery</h3>
-                            <img src="./assets/image/home_marina_gallery_1.jpg" alt="İmage 1" />
-                            <img src="./assets/image/home_marina_gallery_2.jpg" alt="İmage 2" />
-                            <img src="./assets/image/home_marina_gallery_3.jpg" alt="İmage 3" />
-                            <img src="./assets/image/home_marina_gallery_4.jpg" alt="İmage 4" />
+                        <div class="col col-m-12 col-t-3 col-d-2">
+                            <ul class="m-useful__links">
+                                <h3 class="a-title -m-h3 -d-h3">Useful links</h3>
+                                <li>
+                                    <i class="icon-right"></i>
+
+                                    <a href="# ">Duis sed odio</a>
+                                </li>
+                                <li>
+                                    <i class="icon-right"></i>
+
+                                    <a href="# ">Morbi accum</a>
+                                </li>
+                                <li>
+                                    <i class="icon-right"></i>
+
+                                    <a href="# ">Nam nec</a>
+                                </li>
+                                <li>
+                                    <i class="icon-right"></i>
+
+                                    <a href="# ">Class aptent</a>
+                                </li>
+                                <li>
+                                    <i class="icon-right"></i>
+
+                                    <a href="# ">Mauris in erat</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col col-m-12 col-t-3 col-d-3">
+                            <div class="m-our__mission">
+                                <h3 class="a-title -m-h3 -d-h3">Our mission</h3>
+                                <p>
+                                    Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae.
+                                </p>
+                                <a href="# ">Read more</a>
+                            </div>
+                        </div>
+                        <div class="col col-m-12 col-d-3 -column">
+                            <h3 class="a-title -m-h3 -d-h3">Image gallery</h3>
+                            <div class="m-image_gallery">
+                                <img src="./assets/image/home_marina_gallery_1.jpg " alt="İmage 1 " />
+                                <img src="./assets/image/home_marina_gallery_2.jpg " alt="İmage 2 " />
+                                <img src="./assets/image/home_marina_gallery_3.jpg " alt="İmage 3 " />
+                                <img src="./assets/image/home_marina_gallery_4.jpg " alt="İmage 4 " />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="o-footer__copy -mt-10">
-            <div class="copyright col colm-12 jc-center ai-center">
-                <p>
-                    © 2021 Marina. All Rights Reserved. <a href="#">Muffin group</a>
-                </p>
+            <div class="o-footer__copy -mt-10">
+                <div class="copyright col colm-12 jc-center ai-center">
+                    <p>
+                        © 2021 Marina. All Rights Reserved. <a href="# ">Muffin group</a>
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <script src="./assets/js/custom.js"></script>
 </body>
 
 </html>

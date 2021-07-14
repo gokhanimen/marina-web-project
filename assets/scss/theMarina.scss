@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300;400;700&display=swap');
 @import "./variables/_initial.scss";
 @import "./mixins/_initial.scss";
-@import "./components/_initial.scss";
 @import "./components/helpers/_initial.scss";
+@import "./components/_footer.scss";
+@import "./components/_a-btn.scss";
 @import "../icons/_icon-font.scss";
-$header-height: 251px;
+@import "./components/_m-header.scss";
 .o-showcase {
     height: 100vh;
     width: 100%;
@@ -95,79 +96,6 @@ $header-height: 251px;
         & img {
             height: 210px;
             width: 310px;
-        }
-    }
-}
-
-.o-footer {
-    height: 100%;
-    padding-top: 90px;
-    background-color: #251248;
-    position: relative;
-    &::before {
-        content: "";
-        position: absolute;
-        background-image: url("../image/home_marina_decoration1.png");
-        background-repeat: no-repeat;
-        height: 13px;
-        width: 100%;
-        top: -13px;
-    }
-    & .inclusive {
-        padding-bottom: 90px;
-    }
-    & h3 {
-        color: $White;
-        padding-bottom: 25px;
-    }
-    & a {
-        @include font-size(10px,
-        12px);
-        color: $White;
-        text-decoration: none;
-    }
-    & li {
-        padding-bottom: 20px;
-        & i {
-            font-size: 14px;
-            color: $Pomegrante;
-            margin-right: 10px;
-        }
-    }
-    & p {
-        color: $White;
-        padding-bottom: 25px;
-    }
-    & .m-image_gallery {
-        & img {
-            height: 120px;
-            width: 120px;
-            margin-right: 7px;
-            margin-bottom: 7px;
-        }
-    }
-    & p {
-        @include font-size(10px,
-        12px);
-        color: $SpunPearl;
-    }
-    & .m-our_mission {
-        & a {
-            color: $Pomegrante;
-        }
-        & p {
-            @include font-size(9px,
-            16px)
-        }
-    }
-    & .o-footer__copy {
-        border-top: .5px solid $DoveGray;
-        padding-top: 30px;
-        & .copyright {
-            & a:hover {
-                color: $Pomegrante;
-                text-decoration: underline $Pomegrante;
-            }
         }
     }
 }

@@ -1,0 +1,93 @@
+.o-footer {
+    height: 100%;
+    padding-top: 30px;
+    background-color: #251248;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../image/home_marina_decoration1.png");
+        background-repeat: no-repeat;
+        height: 13px;
+        width: 100%;
+        top: -13px;
+    }
+    & .inclusive {
+        padding-bottom: 30px;
+    }
+    & h3 {
+        color: $White;
+        padding-bottom: 25px;
+    }
+    & a {
+        @include font-size(8px,
+        10px);
+        color: $White;
+        text-decoration: none;
+    }
+    & li {
+        padding-bottom: 20px;
+        & i {
+            font-size: 14px;
+            color: $Pomegrante;
+            margin-right: 10px;
+        }
+    }
+    & p {
+        color: $White;
+        padding-bottom: 25px;
+    }
+    & .m-image_gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        & img {
+            width: 49%;
+        }
+    }
+    & p {
+        @include font-size(10px,
+        12px);
+        color: $SpunPearl;
+    }
+    & .m-our__mission {
+        & a {
+            color: $Pomegrante;
+        }
+        & p {
+            @include font-size(9px,
+            16px)
+        }
+    }
+    & .o-footer__copy {
+        border-top: .5px solid $DoveGray;
+        padding-top: 30px;
+        & .copyright {
+            & a:hover {
+                color: $Pomegrante;
+                text-decoration: underline $Pomegrante;
+            }
+        }
+    }
+}
+
+@include desktop() {
+    .o-footer {
+        padding-top: 90px;
+        & .inclusive {
+            padding-bottom: 90px;
+        }
+        & a {
+            @include font-size(10px,
+            12px);
+            color: $White;
+            text-decoration: none;
+        }
+        & .m-image_gallery {
+            & img {
+                height: 120px;
+                width: 120px;
+            }
+        }
+    }
+}

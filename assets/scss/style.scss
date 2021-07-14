@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300;400;700&display=swap');
 @import "./variables/_initial.scss";
 @import "./mixins/_initial.scss";
-@import "./components/_initial.scss";
 @import "./components/helpers/_initial.scss";
 @import "./components/_m-card.scss";
+@import "./components/_m-header.scss";
+@import "./components/_a-btn.scss";
+@import "./components/_footer.scss";
 @import "../icons/_icon-font.scss";
-$header-height: 60px;
 .o-showcase {
     padding-bottom: 50px;
     height: 130vh;
@@ -28,71 +29,6 @@ $header-height: 60px;
             color: $White;
             font-family: $second-font-family;
             font-weight: $light;
-        }
-    }
-}
-
-.o-header {
-    position: relative;
-    height: $header-height;
-    width: 100%;
-    background-color: $Valhalla;
-    &__hamburger {
-        position: absolute;
-        right: 15px;
-    }
-    &__logo {
-        height: 50px;
-        width: 50px;
-        object-fit: cover;
-    }
-    &__content {
-        width: 100%;
-        height: $header-height;
-        @include flex(flex,
-        row,
-        nowrap,
-        center);
-    }
-    &__menu {
-        @include flex(flex,
-        row-reverse,
-        nowrap,
-        center);
-    }
-    & .o-navigation {
-        & ul {
-            @include flex(flex,
-            row,
-            nowrap,
-            center);
-            & li {
-                @include transition(all,
-                300ms);
-                padding: 14px 20px;
-                border-top: 4px solid transparent;
-                border-top: .5px solid rgba(#fff, .2);
-                &.-active {
-                    border-top: 4px solid #fff;
-                    & a {
-                        color: $White;
-                    }
-                }
-                &:hover {
-                    @include transition(all,
-                    300ms);
-                    border-top: 4px solid #fff;
-                    & a {
-                        color: $White;
-                    }
-                }
-                & a {
-                    color: $Mischka;
-                    text-decoration: none;
-                    font-family: $first-font-family;
-                    @include font-size(12px);
-                }
-            }
         }
     }
 }
@@ -140,7 +76,7 @@ $header-height: 60px;
             #{$article}__info {
                 margin-bottom: 20px;
                 @include transition(all,
-                300ms)
+                300ms);
             }
         }
         & img {
@@ -277,101 +213,10 @@ $header-height: 60px;
     }
 }
 
-.o-footer {
-    height: 100%;
-    padding-top: 30px;
-    background-color: #251248;
-    position: relative;
-    &::before {
-        content: "";
-        position: absolute;
-        background-image: url("../image/home_marina_decoration1.png");
-        background-repeat: no-repeat;
-        height: 13px;
-        width: 100%;
-        top: -13px;
-    }
-    & .inclusive {
-        padding-bottom: 30px;
-    }
-    & h3 {
-        color: $White;
-        padding-bottom: 25px;
-    }
-    & a {
-        @include font-size(8px,
-        10px);
-        color: $White;
-        text-decoration: none;
-    }
-    & li {
-        padding-bottom: 20px;
-        & i {
-            font-size: 14px;
-            color: $Pomegrante;
-            margin-right: 10px;
-        }
-    }
-    & p {
-        color: $White;
-        padding-bottom: 25px;
-    }
-    & .m-image_gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7px;
-        & img {
-            width: 49%;
-        }
-    }
-    & p {
-        @include font-size(10px,
-        12px);
-        color: $SpunPearl;
-    }
-    & .m-our_mission {
-        & a {
-            color: $Pomegrante;
-        }
-        & p {
-            @include font-size(9px,
-            16px)
-        }
-    }
-    & .o-footer__copy {
-        border-top: .5px solid $DoveGray;
-        padding-top: 30px;
-        & .copyright {
-            & a:hover {
-                color: $Pomegrante;
-                text-decoration: underline $Pomegrante;
-            }
-        }
-    }
-}
-
 @include desktop() {
-    $header-height: 251px;
     .o-showcase {
         & .col:not(:last-child) {
             border-right: .5px solid rgba(#fff, .2);
-        }
-    }
-    .o-header {
-        height: $header-height;
-        background-color: transparent;
-        &__logo {
-            @include desktop() {
-                height: 90px;
-                width: 90px;
-            }
-        }
-        &__content {
-            height: $header-height;
-            @include flex(flex,
-            column,
-            nowrap,
-            space-evenly);
         }
     }
     .articleList {
@@ -405,24 +250,6 @@ $header-height: 60px;
         background-position-y: 80px;
         & .m-image {
             height: 649px;
-        }
-    }
-    .o-footer {
-        padding-top: 90px;
-        & .inclusive {
-            padding-bottom: 90px;
-        }
-        & a {
-            @include font-size(10px,
-            12px);
-            color: $White;
-            text-decoration: none;
-        }
-        & .m-image_gallery {
-            & img {
-                height: 120px;
-                width: 120px;
-            }
         }
     }
 }
